@@ -1,0 +1,19 @@
+#!/bin/bash
+
+VALUE=$[ $(($3%4))==0 && $(($3%100))!=0 ]
+year=$3
+month=$1
+day=$2
+
+if [ $VALUE -eq 1 ]
+then
+   echo TRUE
+else
+   echo FALSE
+fi
+y=$(($year-=$y+$(($y/4))-$(($y/100))+$(($y/400));
+#m=$month+ (  12 * ( $(( $((14-$month))/12)) )-2;
+#d0=$((( $day+$x+ ( $(( $((31*$m)/12)) ) % 7));
+echo $year
+echo $month
+echo $day
